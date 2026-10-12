@@ -37,7 +37,15 @@ def main() -> int:
                         help='replace an unreviewed draft')
     parser.add_argument('--refresh-feeds', action='store_true',
                         help='check approved feeds again even if today has a local story pool')
+    parser.add_argument('--timeout-seconds', type=int, default=300,
+                        help='refresh-local generation budget, 60–1800 seconds (default: 300)')
+    parser.add_argument('--model-timeout-seconds', type=int, default=120,
+                        help='refresh-local model request limit, 30–600 seconds (default: 120)')
     args = parser.parse_args()
+    if not 60 <= args.timeout_seconds <= 1800:
+        parser.error('--timeout-seconds must be between 60 and 1800')
+    if not 30 <= args.model_timeout_seconds <= 600:
+        parser.error('--model-timeout-seconds must be between 30 and 600')
     if args.command == 'demo':
         save_digest(load_digest(DEMO_DIGEST))
         print(f'Saved labeled DEMO sample data to {DEFAULT_DIGEST}')
@@ -179,7 +187,9 @@ def main() -> int:
                       'the last complete digest remains visible.')
                 return 1
 
-            deadline = monotonic() + 300
+            deadline = monotonic() + args.timeout_seconds
+            print(f'Generation budget: {args.timeout_seconds}s; '
+                  f'per-model-request limit: {args.model_timeout_seconds}s.', flush=True)
 
             def cache_model_identity() -> str:
                 """Identify local model weights once, when a new story needs the cache."""
@@ -190,7 +200,8 @@ def main() -> int:
             def local_summary(items: list[SourceItem]):
                 """Send only genuinely new selected articles to installed Ollama."""
                 return summarize_local_items(items, settings.ollama_model,
-                                             deadline=deadline)
+                                             deadline=deadline,
+                                             request_timeout=args.model_timeout_seconds)
 
             def show_refresh_progress(message: str) -> None:
                 """Print each checked story promptly during a slow local run."""
@@ -207,6 +218,9 @@ def main() -> int:
                     on_progress=show_refresh_progress, summary_cache=summary_cache)
                 for note in article_notes:
                     print(note)
+                if digest == previous:
+                    print('No new checked stories; the saved digest was not rewritten.')
+                    return 0
                 save_digest(digest, DEFAULT_DIGEST)
             except Exception as exc:
                 print(f'Automatic refresh failed ({type(exc).__name__}: {exc}); '

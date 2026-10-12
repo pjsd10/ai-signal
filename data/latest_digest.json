@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-10-12T03:04:04.266403Z",
+  "generated_at": "2026-10-12T04:36:58.985521Z",
   "timezone": "America/New_York",
   "status": "live",
   "stories": [
     {
-      "id": "570fe3204556675e",
-      "title": "Sophos cuts threat investigation time by 96% with OpenAI Daybreak",
-      "source_name": "OpenAI News",
+      "id": "10ff9df7a5585aaf",
+      "title": "Silicon Valley is falling in line with Trump’s attempt to rename AI",
+      "source_name": "The Verge",
       "source_type": "rss",
-      "source_url": "https://openai.com/index/sophos",
-      "published_at": "2026-10-09T07:00:00Z",
-      "category": "AI & Cybersecurity",
-      "source_excerpt": "Discover how Sophos uses OpenAI’s Daybreak to cut cyber-threat investigation time by 96% and automate 52% of MDR cases while preserving human oversight.",
+      "source_url": "https://www.theverge.com/ai-artificial-intelligence/1009406/silicon-valley-is-falling-in-line-with-trumps-attempt-to-rename-ai",
+      "published_at": "2026-10-11T18:33:56Z",
+      "category": "AI News",
+      "source_excerpt": "When President Donald Trump announced his plans to rebrand artificial intelligence as \"super intelligence,\" you'd be forgiven for being skeptical that it would catch on. While most of the broader population is sticking with AI, some of Silicon Valley's most powerful are falling in line and trying to give Trump the great AI rebrand he […]",
       "summary_basis": "article_text",
       "date_precision": "timestamp",
-      "simple_explanation": "OpenAI says Sophos's Daybreak agents gather threat signals and customer context, then prepare investigation plans and suggested responses for analysts. For cases using those agents, Sophos reports average response time fell from about 38 minutes to 89 seconds.",
-      "why_it_matters": "Faster handling of routine cases could give analysts more time for unusual threats and decisions that need human judgment.",
+      "simple_explanation": "Some prominent figures in Silicon Valley, including Elon Musk, Marc Benioff, Jensen Huang, and Satya Nadella, have agreed to rename artificial intelligence (AI) as 'super intelligence' as per President Donald Trump's suggestion.",
+      "why_it_matters": "This move highlights the extent to which influential figures in the tech industry are willing to align with political figures, potentially affecting the public perception and terminology used in the field of AI.",
       "analogy": null
     },
     {
@@ -49,21 +49,6 @@
       "analogy": null
     },
     {
-      "id": "9bf93d58cc35db99",
-      "title": "Asana cuts model costs 76x in browser tests with GPT-6.1 Sol",
-      "source_name": "OpenAI News",
-      "source_type": "rss",
-      "source_url": "https://openai.com/index/asana-browser-agent",
-      "published_at": "2026-10-09T07:00:00Z",
-      "category": "AI Models",
-      "source_excerpt": "Using GPT-6 Astra in Codex, Asana made its browser agent 76x cheaper and 5x faster in tests to offer customers more capable models.",
-      "summary_basis": "article_text",
-      "date_precision": "timestamp",
-      "simple_explanation": "Asana used GPT-6 Astra in Codex to improve its browser agent. The optimized agent ran on GPT-6.1 Sol; in a 144-run study, its estimated model cost averaged about $0.47 and runtime about four minutes, versus at least $36.21 and 22.5 minutes for Asana's original Model B setup.",
-      "why_it_matters": "Lower running costs could let Asana offer more capable browser automation to customers without making every task expensive.",
-      "analogy": null
-    },
-    {
       "id": "855092fba1df7e8a",
       "title": "Pollo AI turns creative ideas into campaigns with OpenAI",
       "source_name": "OpenAI News",
@@ -76,6 +61,21 @@
       "date_precision": "timestamp",
       "simple_explanation": "Pollo Agent turns rough ideas and reference images into storylines, scene plans, and scripts. OpenAI describes one user turning a product photo into a short fragrance ad when a professional video shoot was beyond their budget.",
       "why_it_matters": "A guided workflow can leave creators more time to shape their campaigns. Pollo AI reports that its users spend more than 50% less time choosing or switching models.",
+      "analogy": null
+    },
+    {
+      "id": "570fe3204556675e",
+      "title": "Sophos cuts threat investigation time by 96% with OpenAI Daybreak",
+      "source_name": "OpenAI News",
+      "source_type": "rss",
+      "source_url": "https://openai.com/index/sophos",
+      "published_at": "2026-10-09T07:00:00Z",
+      "category": "AI & Cybersecurity",
+      "source_excerpt": "Discover how Sophos uses OpenAI’s Daybreak to cut cyber-threat investigation time by 96% and automate 52% of MDR cases while preserving human oversight.",
+      "summary_basis": "article_text",
+      "date_precision": "timestamp",
+      "simple_explanation": "OpenAI says Sophos's Daybreak agents gather threat signals and customer context, then prepare investigation plans and suggested responses for analysts. For cases using those agents, Sophos reports average response time fell from about 38 minutes to 89 seconds.",
+      "why_it_matters": "Faster handling of routine cases could give analysts more time for unusual threats and decisions that need human judgment.",
       "analogy": null
     }
   ],
@@ -97,8 +97,8 @@
   "story_history": [
     {
       "url": "https://blog.google/products-and-platforms/products/education/special-education-gemini",
-      "last_shown_at": "2026-10-12T03:04:04.266403Z",
-      "times_shown": 3
+      "last_shown_at": "2026-10-12T04:36:58.985521Z",
+      "times_shown": 5
     },
     {
       "url": "https://openai.com/index/asana-browser-agent",
@@ -106,14 +106,24 @@
       "times_shown": 3
     },
     {
+      "url": "https://openai.com/index/atlassian-partnership",
+      "last_shown_at": "2026-10-12T04:18:54.452683Z",
+      "times_shown": 1
+    },
+    {
+      "url": "https://openai.com/index/gpt-6-for-everyone",
+      "last_shown_at": "2026-10-12T04:18:54.452683Z",
+      "times_shown": 1
+    },
+    {
       "url": "https://openai.com/index/pollo-ai",
-      "last_shown_at": "2026-10-12T03:04:04.266403Z",
-      "times_shown": 2
+      "last_shown_at": "2026-10-12T04:36:58.985521Z",
+      "times_shown": 3
     },
     {
       "url": "https://openai.com/index/sophos",
-      "last_shown_at": "2026-10-12T03:04:04.266403Z",
-      "times_shown": 3
+      "last_shown_at": "2026-10-12T04:36:58.985521Z",
+      "times_shown": 4
     },
     {
       "url": "https://openai.com/index/teens-learn-and-plan",
@@ -122,13 +132,13 @@
     },
     {
       "url": "https://www.theverge.com/ai-artificial-intelligence/1009051/privacy-ai-agent-promises-openai-meta-muse-dots",
-      "last_shown_at": "2026-10-12T03:04:04.266403Z",
-      "times_shown": 2
+      "last_shown_at": "2026-10-12T04:36:58.985521Z",
+      "times_shown": 4
     },
     {
       "url": "https://www.theverge.com/ai-artificial-intelligence/1009286/anthropic-is-cutting-off-its-internal-evaluations-from-the-internet",
-      "last_shown_at": "2026-10-12T03:04:04.266403Z",
-      "times_shown": 2
+      "last_shown_at": "2026-10-12T04:36:58.985521Z",
+      "times_shown": 4
     },
     {
       "url": "https://www.theverge.com/ai-artificial-intelligence/1009337/satya-nadella-says-we-should-assume-all-ai-models-are-compromised",
@@ -137,8 +147,8 @@
     },
     {
       "url": "https://www.theverge.com/ai-artificial-intelligence/1009406/silicon-valley-is-falling-in-line-with-trumps-attempt-to-rename-ai",
-      "last_shown_at": "2026-10-12T02:41:21.848722Z",
-      "times_shown": 1
+      "last_shown_at": "2026-10-12T04:36:58.985521Z",
+      "times_shown": 3
     }
   ]
 }

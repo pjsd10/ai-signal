@@ -120,3 +120,15 @@ def test_relaxed_reruns_and_old_fallbacks_exclude_human_features():
     selected = select_for_rerun([fresh_human, *news], NOW, 48, 6, prior,
                                 relaxed_category=True)
     assert [item.id for item in selected] == [item.id for item in news]
+
+
+def test_backup_candidates_never_introduce_unseen_articles_older_than_five_days():
+    """An expanded retry pool may reuse old shown links but cannot add stale discoveries."""
+    old = [source(f'previous-{index}', 200 + index) for index in range(5)]
+    previous = Digest(generated_at=NOW - timedelta(days=8), status='live',
+                      stories=[story(item) for item in old])
+    fresh = [source('new-one', 1), source('boundary', 120)]
+    unseen_stale = [source('just-too-old', 121), source('very-old', 200)]
+    selected = select_for_rerun([*fresh, *unseen_stale], NOW, 48, 12, previous)
+    assert len(selected) == 7
+    assert {item.id for item in selected} == {item.id for item in [*fresh, *old]}

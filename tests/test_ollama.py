@@ -6,6 +6,7 @@ from datetime import datetime, timezone
 
 import pytest
 from pydantic import ValidationError
+import ai_pulse.ollama as local_model
 
 from ai_pulse.models import SourceItem
 from ai_pulse.ollama import local_model_identity, summarize_local_items
@@ -24,7 +25,10 @@ def source_item() -> SourceItem:
     )
 
 
-def test_local_summary_uses_loopback_and_preserves_source_facts():
+@pytest.mark.parametrize('request_limit, remaining, expected', [
+    (120, None, 120), (300, None, 300), (300, 45, 45)])
+def test_local_summary_uses_loopback_and_preserves_source_facts(
+        monkeypatch, request_limit, remaining, expected):
     """Send one schema request to localhost and keep source-controlled data."""
     requests = []
 
@@ -41,12 +45,20 @@ def test_local_summary_uses_loopback_and_preserves_source_facts():
         }]})}}
         return io.BytesIO(json.dumps(body).encode('utf-8'))
 
-    digest = summarize_local_items([source_item()], 'gemma3:4b', open_url=fake_open)
+    def fake_clock():
+        """Make the remaining total budget deterministic without sleeping."""
+        return 100
+
+    monkeypatch.setattr(local_model, 'monotonic', fake_clock)
+    digest = summarize_local_items(
+        [source_item()], 'gemma3:4b', open_url=fake_open,
+        request_timeout=request_limit,
+        deadline=None if remaining is None else 100 + remaining)
     request, timeout = requests[1]
     payload = json.loads(request.data)
     assert requests[0][0].full_url == 'http://127.0.0.1:11434/api/tags'
     assert request.full_url == 'http://127.0.0.1:11434/api/chat'
-    assert timeout == 120
+    assert timeout == expected
     assert payload['model'] == 'gemma3:4b'
     assert payload['format']['type'] == 'object'
     assert payload['stream'] is False

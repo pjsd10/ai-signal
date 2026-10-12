@@ -262,11 +262,11 @@ def select_for_rerun(items: list[SourceItem], now: datetime, hours: int,
     if len(selected) < count:
         older = filter_recent([*items, *previous_sources(previous)], now, 24 * 365 * 20)
         fallback = [item for item in older
-                    if url_key(item.source_url) not in selected_urls]
+                    if url_key(item.source_url) in history
+                    and url_key(item.source_url) not in selected_urls]
         fallback.sort(key=lambda item: (
-            url_key(item.source_url) in history,
-            history[url_key(item.source_url)].last_shown_at
-            if url_key(item.source_url) in history else datetime.min.replace(tzinfo=timezone.utc),
+            history[url_key(item.source_url)].last_shown_at,
+            history[url_key(item.source_url)].times_shown,
             -item.published_at.timestamp()))
         selected.extend(fallback[:count - len(selected)])
     return selected

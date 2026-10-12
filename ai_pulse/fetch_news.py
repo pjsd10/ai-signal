@@ -37,7 +37,7 @@ class FeedSource:
             raise ValueError('Feed host must belong to its approved publisher')
 
 
-# Approved publisher feeds and their allowed article domains.
+# Use only the verified publisher endpoints and their approved article domains.
 FEEDS: tuple[FeedSource, ...] = (
     FeedSource('OpenAI News', 'https://openai.com/news/rss.xml', ('openai.com',)),
     FeedSource('Google DeepMind', 'https://deepmind.google/blog/rss.xml', ('deepmind.google',)),

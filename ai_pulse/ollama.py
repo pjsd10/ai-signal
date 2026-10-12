@@ -31,12 +31,15 @@ def local_model_identity(model: str, open_url=None) -> str:
 
 
 def summarize_local_items(items: list[SourceItem], model: str,
-                          open_url=None, deadline: float | None = None) -> Digest:
+                          open_url=None, deadline: float | None = None,
+                          request_timeout: int = 120) -> Digest:
     """Summarize and validate items, stopping when a caller's time budget ends."""
     if not items or len(items) > 5:
         raise ValueError('Summarization needs one to five selected items')
     if not model:
         raise ValueError('Configure OLLAMA_MODEL with an installed local model')
+    if not 0 < request_timeout <= 600:
+        raise ValueError('Local model request timeout must be between 1 and 600 seconds')
     if open_url is None:
         open_url = build_opener(ProxyHandler({}), NoFeedRedirect()).open
     with open_url(Request(OLLAMA_TAGS_URL), timeout=5) as response:
@@ -48,7 +51,7 @@ def summarize_local_items(items: list[SourceItem], model: str,
     for item in items:
         feedback = ''
         for attempt in range(2):
-            remaining = 120 if deadline is None else deadline - monotonic()
+            remaining = request_timeout if deadline is None else deadline - monotonic()
             if remaining <= 0:
                 raise TimeoutError('Local summary time budget expired')
             prompt = build_prompt([item]) + ('\n\nReturn JSON matching this schema exactly: '
@@ -67,7 +70,7 @@ def summarize_local_items(items: list[SourceItem], model: str,
                 headers={'Content-Type': 'application/json'},
                 method='POST',
             )
-            with open_url(request, timeout=min(120, remaining)) as response:
+            with open_url(request, timeout=min(request_timeout, remaining)) as response:
                 result = json.load(response)
             batch = SummaryBatch.model_validate_json(result['message']['content'])
             try:
