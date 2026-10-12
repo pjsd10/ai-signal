@@ -194,7 +194,7 @@ def url_key(url: object) -> str:
 
 
 def history_index(digest: Digest | None) -> dict[str, StoryHistoryEntry]:
-    """Combine saved history with the visible digest for older MVP files."""
+    """Combine saved history with the visible digest for older digest files."""
     if digest is None or digest.status != 'live':
         return {}
     entries = {url_key(entry.url): entry for entry in digest.story_history}

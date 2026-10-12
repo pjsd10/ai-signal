@@ -1,4 +1,4 @@
-"""A dated, manually reviewed human-interest feature for this MVP briefing."""
+"""A dated, manually reviewed human-interest feature for the AI Signal briefing."""
 
 from datetime import datetime
 from zoneinfo import ZoneInfo
