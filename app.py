@@ -88,7 +88,8 @@ age_hours = max(0, int((datetime.now(timezone.utc) - digest.generated_at).total_
 if digest.status == 'demo':
     st.warning('FICTIONAL SAMPLE · These stories are for exploring the dashboard.')
 else:
-    age_text = 'under an hour' if age_hours == 0 else f'{age_hours} hours'
+    age_text = ('under an hour' if age_hours == 0 else
+                '1 hour' if age_hours == 1 else f'{age_hours} hours')
     feature = digest.featured_story
     feature_age = ((datetime.now(timezone.utc).astimezone(et).date()
                     - feature.published_at.astimezone(et).date()).days
