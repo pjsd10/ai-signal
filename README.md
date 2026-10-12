@@ -4,9 +4,12 @@
 
 ## What it does
 
-- Displays five news cards covering AI, cybersecurity, and tools, plus a separately curated AI-for-Good feature.
-- Shows concise explanations, “Why it matters,” publication dates, publisher excerpts, and original article links.
-- Filters topics, avoids duplicate stories, and caches checked summaries to reduce repeated model calls.
+- **Collects relevant stories:** reads approved publisher RSS feeds, checks publication dates, and retrieves readable article text for the automatic briefing.
+- **Explains the news:** uses local Ollama to write a plain-English summary and a “Why it matters” takeaway for each story.
+- **Builds a focused briefing:** presents five news cards across AI, cybersecurity, and tools, plus a separately curated, dated AI-for-Good feature.
+- **Keeps sources accessible:** shows the publisher and publication date, with an expandable RSS excerpt and a link to the original article.
+- **Supports quick browsing:** lets readers filter by topic and see when the displayed issue was generated.
+- **Makes repeat runs practical:** checks for duplicate stories, caches passing summaries, and preserves the last complete issue when a refresh cannot finish successfully.
 
 ## Run the dashboard
 
