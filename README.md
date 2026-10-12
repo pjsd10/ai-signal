@@ -2,6 +2,8 @@
 
 **AI news, explained in plain English.** A Python and Streamlit project that turns approved publisher articles into a readable briefing using local Ollama summarization.
 
+**[Open the live AI Signal dashboard](https://ai-signal-briefing.streamlit.app/)**
+
 ## What it does
 
 - **Collects relevant stories:** reads approved publisher RSS feeds, checks publication dates, and retrieves readable article text for the automatic briefing.
@@ -23,6 +25,8 @@ py -3.12 -m venv .venv
 ```
 
 The included saved issue works without an API key or Ollama. Opening or reloading the dashboard displays that issue; it does not generate fresh news.
+
+The public dashboard runs on Streamlit Community Cloud independently of the developer's computer. Its displayed issue comes from `data/latest_digest.json` in this repository; fresh generation still runs locally.
 
 ## Generate a new issue
 
