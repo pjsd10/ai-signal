@@ -1,0 +1,31 @@
+{
+  "generated_at": "2026-10-10T13:00:00Z",
+  "timezone": "America/New_York",
+  "status": "demo",
+  "stories": [
+    {
+      "id": "demo-tools",
+      "title": "Sample: An AI helper explains software errors",
+      "source_name": "Fictional Demo Publication",
+      "source_type": "rss",
+      "source_url": "https://example.com/demo-tools",
+      "published_at": "2026-10-10T10:00:00Z",
+      "category": "AI Tools",
+      "source_excerpt": "Fictional RSS excerpt: a writing helper explains software error messages in plain language.",
+      "simple_explanation": "This fictional example describes a tool that explains error messages in plain English. A learner could use the explanation to understand what went wrong, then check the suggested fix themselves. This is sample content for testing the dashboard, not an actual product announcement.",
+      "why_it_matters": "Clear explanations can help beginners learn debugging. AI suggestions still need to be checked."
+    },
+    {
+      "id": "demo-testing",
+      "title": "Sample: A team uses AI to suggest test cases",
+      "source_name": "Fictional Demo Publication",
+      "source_type": "rss",
+      "source_url": "https://example.com/demo-testing",
+      "published_at": "2026-10-09T16:00:00Z",
+      "category": "AI in Testing",
+      "source_excerpt": "Fictional RSS excerpt: a team asks an AI assistant for suggested test cases.",
+      "simple_explanation": "In this fictional scenario, a team asks an AI assistant to suggest ways a form could fail. Suggestions include blank fields and unexpected input. A human reviews the suggestions before turning them into tests. This sample illustrates the explanation format and is not a real news report.",
+      "why_it_matters": "Suggested tests may help a team spot cases they missed, but people must decide what the software should do."
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+/* Local styling only: no external fonts, scripts, or image requests. */
+[data-testid="stAppViewContainer"] { background: #faf8f3; }
+[data-testid="stHeader"] { height: 2rem; background: #faf8f3; }
+[data-testid="stMainBlockContainer"] {
+    max-width: 1080px;
+    padding-top: 2.5rem;
+    padding-bottom: 3rem;
+}
+h1, h2, h3 { color: #112654; }
+[data-testid="stMarkdownContainer"] p { line-height: 1.7; }
+.signal-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+    align-items: center;
+    gap: 2rem;
+    padding: 1.5rem 0 1.8rem;
+    border-top: 4px solid #123f93;
+    border-bottom: 1px solid #deddd6;
+}
+.signal-brand { min-width: 0; }
+.signal-identity { display: flex; align-items: center; gap: 0.65rem; margin-bottom: 1rem; }
+.signal-wordmark { min-width: 0; }
+.signal-hero .signal-mascot {
+    display: block;
+    width: clamp(7.5rem, 14vw, 9rem);
+    height: auto;
+    flex-shrink: 0;
+}
+.signal-kicker {
+    color: #164ca0;
+    font: 700 0.7rem/1.5 Arial, sans-serif;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin: 0 0 0.5rem;
+}
+.signal-hero h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(2.25rem, 4.4vw, 3.5rem);
+    line-height: 1.05;
+    letter-spacing: -0.055em;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+.signal-hero h1 span { color: #e5a521; }
+.signal-hero .signal-intro {
+    color: #42516a;
+    font: 400 1.08rem/1.6 Arial, sans-serif;
+    max-width: 340px;
+    margin: 0;
+}
+.signal-hero .signal-banner {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px #132f6512;
+}
+.signal-section {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 0.25rem 0;
+}
+.signal-section h2 { font: 700 1.65rem Georgia, serif; margin: 0; padding: 0; }
+.signal-section span { font-size: 0.8rem; color: #657084; }
+.signal-category {
+    display: inline-block;
+    padding: 0.28rem 0.65rem;
+    border-radius: 5px;
+    background: #eaf1ff;
+    color: #194a99;
+    font: 700 0.68rem/1.5 Arial, sans-serif;
+    letter-spacing: 0.065em;
+    text-transform: uppercase;
+}
+.signal-category.human { background: #fff0c5; color: #715006; }
+.signal-number { color: #6a7688; font-size: 0.78rem; margin-left: 0.65rem; }
+[class*="st-key-story_"] {
+    background: #fff;
+    border: 1px solid #e1e5ed;
+    border-radius: 14px;
+    padding: 1.4rem 1.6rem;
+    margin-bottom: 0.55rem;
+    box-shadow: 0 3px 12px #182b5305;
+    gap: 0.6rem;
+}
+.st-key-story_lead { border-top: 4px solid #1556c0; }
+.st-key-story_feature { border-top: 4px solid #f4b129; background: #fffdf6; }
+[class*="st-key-story_"] h3 {
+    font-family: Georgia, serif;
+    font-size: 1.7rem;
+    line-height: 1.23;
+    letter-spacing: -0.025em;
+    padding-top: 0;
+}
+[class*="st-key-takeaway_"] {
+    background: #f1f5fc;
+    border-left: 3px solid #e8ad2b;
+    border-radius: 0 8px 8px 0;
+    padding: 0.8rem 1rem;
+    gap: 0.15rem;
+}
+[class*="st-key-takeaway_"] [data-testid="stVerticalBlock"] { gap: 0.25rem; }
+[data-testid="stLinkButton"] a {
+    border: 1px solid #cbd8ed;
+    color: #174b9b;
+    background: #f9fbff;
+    border-radius: 7px;
+    font-weight: 600;
+}
+[data-testid="stLinkButton"] a:hover { background: #eaf1ff; border-color: #174b9b; }
+[data-testid="stExpander"] { border-color: #e6e9ef; border-radius: 7px; }
+[data-testid="stCaptionContainer"], [data-testid="stCaptionContainer"] p { color: #59677b; }
+.signal-footer {
+    border-top: 1px solid #deddd6;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    color: #657084;
+    font-size: 0.78rem;
+    line-height: 1.6;
+}
+@media (max-width: 760px) {
+    [data-testid="stMainBlockContainer"] { padding: 2.5rem 1rem 2rem; }
+    .signal-hero { grid-template-columns: 1fr; gap: 1.2rem; padding: 1.2rem 0; }
+    .signal-hero .signal-banner { max-width: 560px; justify-self: center; }
+    .signal-identity { gap: 0.5rem; }
+    .signal-hero .signal-mascot { width: clamp(6.25rem, 27vw, 7.75rem); }
+    .signal-hero h1 { font-size: clamp(2.1rem, 8vw, 3.2rem); }
+    .signal-kicker { font-size: 0.65rem; letter-spacing: 0.12em; }
+    .signal-hero .signal-intro { max-width: none; }
+    .signal-section { flex-wrap: wrap; gap: 0.25rem; }
+    [class*="st-key-story_"] { padding: 1.1rem; }
+    [class*="st-key-story_"] h3 { font-size: 1.45rem; }
+}

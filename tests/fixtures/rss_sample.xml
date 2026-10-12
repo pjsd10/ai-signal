@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Fictional AI Signal Test Feed</title>
+    <link>https://example.com/</link>
+    <description>Offline fixture. These stories are not real news.</description>
+    <item>
+      <title>Example company launches an AI writing app</title>
+      <link>https://example.com/writing-app?utm_source=test</link>
+      <description>A fictional AI writing tool for testing.</description>
+      <pubDate>Sat, 10 Oct 2026 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Example researchers study a small AI model</title>
+      <link>https://example.com/research</link>
+      <description>A fictional model research update.</description>
+      <pubDate>Sat, 10 Oct 2026 11:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Undated fictional AI story</title>
+      <link>https://example.com/undated</link>
+      <description>Must not pass the freshness check.</description>
+    </item>
+  </channel>
+</rss>

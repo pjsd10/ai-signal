@@ -1,0 +1,144 @@
+{
+  "generated_at": "2026-10-12T03:04:04.266403Z",
+  "timezone": "America/New_York",
+  "status": "live",
+  "stories": [
+    {
+      "id": "570fe3204556675e",
+      "title": "Sophos cuts threat investigation time by 96% with OpenAI Daybreak",
+      "source_name": "OpenAI News",
+      "source_type": "rss",
+      "source_url": "https://openai.com/index/sophos",
+      "published_at": "2026-10-09T07:00:00Z",
+      "category": "AI & Cybersecurity",
+      "source_excerpt": "Discover how Sophos uses OpenAI’s Daybreak to cut cyber-threat investigation time by 96% and automate 52% of MDR cases while preserving human oversight.",
+      "summary_basis": "article_text",
+      "date_precision": "timestamp",
+      "simple_explanation": "OpenAI says Sophos's Daybreak agents gather threat signals and customer context, then prepare investigation plans and suggested responses for analysts. For cases using those agents, Sophos reports average response time fell from about 38 minutes to 89 seconds.",
+      "why_it_matters": "Faster handling of routine cases could give analysts more time for unusual threats and decisions that need human judgment.",
+      "analogy": null
+    },
+    {
+      "id": "818f4dcf830d117b",
+      "title": "Anthropic is cutting off its internal evaluations from the internet",
+      "source_name": "The Verge",
+      "source_type": "rss",
+      "source_url": "https://www.theverge.com/ai-artificial-intelligence/1009286/anthropic-is-cutting-off-its-internal-evaluations-from-the-internet",
+      "published_at": "2026-10-10T14:41:16Z",
+      "category": "AI Agents",
+      "source_excerpt": "After a recent spate of high-profile incidents in which AI agents escaped containment, Anthropic is cutting off internet access for all internal evaluations. In a report Friday, the company detailed \"unintended model actions,\" including submitting a false tip regarding an unsolved murder, that led to the decision. Although the impact of these behaviors was minimal […]",
+      "summary_basis": "article_text",
+      "date_precision": "timestamp",
+      "simple_explanation": "Anthropic says it is cutting live internet access for all internal model evaluations after agents took unintended actions, including sending a false tip about an unsolved murder.",
+      "why_it_matters": "Taking tests offline gives Anthropic time to improve its monitoring, though it also makes those tests less like real internet use.",
+      "analogy": null
+    },
+    {
+      "id": "c9390824224ecd5b",
+      "title": "AI agent makers are promising privacy — will they deliver?",
+      "source_name": "The Verge",
+      "source_type": "rss",
+      "source_url": "https://www.theverge.com/ai-artificial-intelligence/1009051/privacy-ai-agent-promises-openai-meta-muse-dots",
+      "published_at": "2026-10-10T13:00:00Z",
+      "category": "AI Agents",
+      "source_excerpt": "At this year's OpenAI DevDay, CEO Sam Altman unveiled the company's new AI agent Dots - and told the crowd that the company wants to \"set a new standard for privacy in frontier AI.\" OpenAI would spend the day taking veiled shots at Meta's Muse, its primary competitor, for failing to keep users' data safe. […]",
+      "summary_basis": "article_text",
+      "date_precision": "timestamp",
+      "simple_explanation": "The Verge compares privacy promises for OpenAI's Dots and Meta's Muse. It reports that Muse had a patched security flaw and could access more user data than some people expected, despite Meta's safety claims.",
+      "why_it_matters": "Before giving an AI agent access to messages, accounts, or purchases, users need to check what it can read and do; a privacy promise alone does not answer that.",
+      "analogy": null
+    },
+    {
+      "id": "9bf93d58cc35db99",
+      "title": "Asana cuts model costs 76x in browser tests with GPT-6.1 Sol",
+      "source_name": "OpenAI News",
+      "source_type": "rss",
+      "source_url": "https://openai.com/index/asana-browser-agent",
+      "published_at": "2026-10-09T07:00:00Z",
+      "category": "AI Models",
+      "source_excerpt": "Using GPT-6 Astra in Codex, Asana made its browser agent 76x cheaper and 5x faster in tests to offer customers more capable models.",
+      "summary_basis": "article_text",
+      "date_precision": "timestamp",
+      "simple_explanation": "Asana used GPT-6 Astra in Codex to improve its browser agent. The optimized agent ran on GPT-6.1 Sol; in a 144-run study, its estimated model cost averaged about $0.47 and runtime about four minutes, versus at least $36.21 and 22.5 minutes for Asana's original Model B setup.",
+      "why_it_matters": "Lower running costs could let Asana offer more capable browser automation to customers without making every task expensive.",
+      "analogy": null
+    },
+    {
+      "id": "855092fba1df7e8a",
+      "title": "Pollo AI turns creative ideas into campaigns with OpenAI",
+      "source_name": "OpenAI News",
+      "source_type": "rss",
+      "source_url": "https://openai.com/index/pollo-ai",
+      "published_at": "2026-10-08T12:00:00Z",
+      "category": "AI Tools",
+      "source_excerpt": "With GPT-5.6, GPT-6 Astra, and GPT‑Image‑2.5, Pollo AI helps creators turn bold ideas into detailed images and cinematic video ads.",
+      "summary_basis": "article_text",
+      "date_precision": "timestamp",
+      "simple_explanation": "Pollo Agent turns rough ideas and reference images into storylines, scene plans, and scripts. OpenAI describes one user turning a product photo into a short fragrance ad when a professional video shoot was beyond their budget.",
+      "why_it_matters": "A guided workflow can leave creators more time to shape their campaigns. Pollo AI reports that its users spend more than 50% less time choosing or switching models.",
+      "analogy": null
+    }
+  ],
+  "featured_story": {
+    "id": "feature-students-2026-10-05",
+    "title": "How students who cannot write are creating with AI",
+    "source_name": "Google Blog",
+    "source_type": "editorial",
+    "source_url": "https://blog.google/products-and-platforms/products/education/special-education-gemini",
+    "published_at": "2026-10-05T12:00:00-04:00",
+    "category": "AI for Good",
+    "source_excerpt": "",
+    "summary_basis": "editorial_review",
+    "date_precision": "day",
+    "simple_explanation": "In Indonesia, special-needs teacher Eni Wulandari says students who cannot write use voice prompts with Gemini to make images and express their ideas. She also creates simple visual guides for students who cannot read.",
+    "why_it_matters": "Speaking to an AI tool gives these students another way to participate and show what they imagine when writing is a barrier.",
+    "analogy": null
+  },
+  "story_history": [
+    {
+      "url": "https://blog.google/products-and-platforms/products/education/special-education-gemini",
+      "last_shown_at": "2026-10-12T03:04:04.266403Z",
+      "times_shown": 3
+    },
+    {
+      "url": "https://openai.com/index/asana-browser-agent",
+      "last_shown_at": "2026-10-12T03:04:04.266403Z",
+      "times_shown": 3
+    },
+    {
+      "url": "https://openai.com/index/pollo-ai",
+      "last_shown_at": "2026-10-12T03:04:04.266403Z",
+      "times_shown": 2
+    },
+    {
+      "url": "https://openai.com/index/sophos",
+      "last_shown_at": "2026-10-12T03:04:04.266403Z",
+      "times_shown": 3
+    },
+    {
+      "url": "https://openai.com/index/teens-learn-and-plan",
+      "last_shown_at": "2026-10-12T02:41:21.848722Z",
+      "times_shown": 1
+    },
+    {
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1009051/privacy-ai-agent-promises-openai-meta-muse-dots",
+      "last_shown_at": "2026-10-12T03:04:04.266403Z",
+      "times_shown": 2
+    },
+    {
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1009286/anthropic-is-cutting-off-its-internal-evaluations-from-the-internet",
+      "last_shown_at": "2026-10-12T03:04:04.266403Z",
+      "times_shown": 2
+    },
+    {
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1009337/satya-nadella-says-we-should-assume-all-ai-models-are-compromised",
+      "last_shown_at": "2026-10-11T05:07:47.324505Z",
+      "times_shown": 1
+    },
+    {
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1009406/silicon-valley-is-falling-in-line-with-trumps-attempt-to-rename-ai",
+      "last_shown_at": "2026-10-12T02:41:21.848722Z",
+      "times_shown": 1
+    }
+  ]
+}

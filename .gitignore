@@ -1,0 +1,24 @@
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+.pytest_cache/
+.pytest_tmp*/
+*.py[cod]
+email_preview.html
+data/latest_digest.before_*.json
+data/draft_digest.json
+data/email_receipts/
+data/story_pool.json
+data/summary_cache.json
+credentials*.json
+token*.json
+.streamlit/secrets.toml
+# Personal collaboration and learning notes belong outside the repository.
+WORK_LOG.md
+BUILD_TRACKER.md
+skills.md
+DEMO*.md
+*Q&A*.md
+private-notes/
